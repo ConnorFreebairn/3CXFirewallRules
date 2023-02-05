@@ -4,10 +4,10 @@
 # Description: A bash script to add multiple firewall rules using the iptables firewall
 # Date: 05-02-2023
 
-# To run the script execute the following commands when logged in as root
+# To run the script execute the following commnads when logged in as root
 # wget https://raw.githubusercontent.com/ConnorFreebairn/3CXFirewallRules/main/script.sh
 # chmod +x script.sh
-# ./script.sh 192.168.1.1
+# ./script.sh 192.168.1.1 192.168.1.2
 
 # Flush existing iptables rules
 sudo iptables -F
@@ -50,6 +50,10 @@ echo "iptables rule added for inbound UDP traffic on ports 9000 to 10999"
 
 # Allow incoming SSH traffic on port 22 from specific IP address provided at runtime
 sudo iptables -A INPUT -p tcp -s $1 --dport 22 -j ACCEPT
+echo "iptables rule added to allow incoming SSH traffic on port 22 from IP address provided at runtime"
+
+# Allow incoming SSH traffic on port 22 from specific IP address provided at runtime
+sudo iptables -A INPUT -p tcp -s $2 --dport 22 -j ACCEPT
 echo "iptables rule added to allow incoming SSH traffic on port 22 from IP address provided at runtime"
 
 # Allow all outbound traffic
