@@ -7,7 +7,7 @@
 # To run the script execute the following commnads when logged in as root
 # wget https://raw.githubusercontent.com/ConnorFreebairn/3CXFirewallRules/main/script.sh
 # chmod +x script.sh
-# ./script.sh
+# ./script.sh 192.168.1.1
 
 # Flush existing iptables rules
 sudo iptables -F
