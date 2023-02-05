@@ -4,7 +4,7 @@
 # Description: A bash script to add multiple firewall rules using the iptables firewall
 # Date: 05-02-2023
 
-# To run the script execute the following commnads when logged in as root
+# To run the script execute the following commands when logged in as root
 # wget https://raw.githubusercontent.com/ConnorFreebairn/3CXFirewallRules/main/script.sh
 # chmod +x script.sh
 # ./script.sh 192.168.1.1
